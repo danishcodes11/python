@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Python (Pyodide)",
+      "language": "python"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "2e157088-70b7-4871-9fae-4052859ff80e",
+      "cell_type": "code",
+      "source": "initial_chare = 100\ndef fine_calc(basic_charge,nofdays):\n    if(nofdays<7):\n        print(f\"For {nofdays} Only basic charge applicable:: {basic_charge}.\")\n    elif(nofdays<15):\n        print(f\"(For {nofdays} days 10% Charge is applicable::\\nFinal amount::{basic_charge+(basic_charge*0.1)}\")\n    elif(nofdays<30):\n        print(f\"For {nofdays} days 20% Charge is applicable::\\nFinal amount:: {basic_charge+(basic_charge*0.2)}\")\n    else:\n        print(f\"For {nofdays} days 30% charge is applicable::\\nFinal amount:: {basic_charge+(basic_charge*0.3)}\")\nnofdays = int(input(\"Enter no of days:: \"))\nfine_calc(initial_chare,nofdays)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Enter no of days::  245\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "For 245 days 30% charge is applicable::\nFinal amount:: 130.0\n"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "id": "ac7d89cc-beca-4517-8fc0-da7345439701",
+      "cell_type": "code",
+      "source": "age = int(input(\"Enter your age:: \"))\nprint(\"Elibigle for voting and driving both!\" if age > 18 else \"Eligible for Driving Only\" if age >= 16 else \"Not Eligible for anything\")",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Enter your age::  19\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Elibigle for voting and driving both!\n"
+        }
+      ],
+      "execution_count": 2
+    },
+    {
+      "id": "2ff00630-fda3-480c-ad66-2ac6adc0c309",
+      "cell_type": "code",
+      "source": "try:\n    while(True):\n        a = float(input(\"Enter num1: \"))\n        b = (float(input(\"Enter num2: \")))\n        choice = input(\"Choose operation (+, -, *, /, Y for exit)\\n::\")\n        if(choice==\"+\"):\n            print(a+b)\n        elif(choice==\"-\"):\n            print(a-b)\n        elif(choice==\"*\"):\n            print(a*b)\n        elif(choice==\"/\"):\n            if(b==0):\n                print(\"Zero devision Not Allowed!\")\n            print(a/b)\n        elif choice.upper()==\"Y\":\n            print(\"Exited Succesfully!\")\n            break\n        else:\n            print(\"Wrong operator try again!\")\n            \nexcept Exception as e:\n    print(f\"Exception Caught:: {e}\")\n# print(eval(input(\":\")))",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Enter num1:  8\nEnter num2:  4\nChoose operation (+, -, *, /, Y for exit)\n:: *\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "32.0\n"
+        },
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Enter num1:  4\nEnter num2:  9\nChoose operation (+, -, *, /, Y for exit)\n:: +\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "13.0\n"
+        }
+      ],
+      "execution_count": null
+    },
+    {
+      "id": "3a4faed4-ddec-4e08-bc57-1908ef830a6c",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
